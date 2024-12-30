@@ -15,17 +15,16 @@ module.exports = {
     },
     plugins: [
         new CopyPlugin({
-            patterns: [{
+            patterns: [
+                {
                     from: "./src/js/language/locale/*.json",
-                    to: path.join(output_path, "js/locale"),
-                    flatten: true
+                    to: "js/locale/[name][ext]", // Используем [name] для сохранения оригинального имени файла
                 },
                 {
                     from: './src/embed/*',
-                    to: path.join(output_path, "embed"),
-                    flatten: true
+                    to: "embed/[name][ext]", // Используем [name] для сохранения оригинального имени файла
                 }
-            ]
+            ],
         }),
         new CleanWebpackPlugin({
             cleanStaleWebpackAssets: true

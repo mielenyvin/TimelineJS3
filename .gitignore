@@ -6,7 +6,7 @@
 # (The answer is probably "yes").
 *.pyc
 node_modules/
-
+.env
 knight-lab-timelinejs-*.tgz
 
 # Other
@@ -18,3 +18,4 @@ build
 *.log
 dist
 .vscode
+.vercel
